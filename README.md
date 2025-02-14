@@ -23,8 +23,7 @@
 
 1. **リポジトリをクローン**:
    ```command
-   git clone https://github.com/yourusername/user-registration-app.git
-   cd user-registration-app
+   git clone https://github.com/naoki763/Flask-start.git
    ```
 
 2. **uv を使用して環境を構築**:
@@ -59,3 +58,8 @@
    ```
 
 6. ブラウザでアクセス: http://127.0.0.1:5000/ にアクセスしてください。
+
+
+
+
+あほあほあほあほ
