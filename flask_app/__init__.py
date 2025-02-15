@@ -13,6 +13,7 @@ def create_app():
     db.init_app(app)
     
     with app.app_context():
+        from flask_app import models
         db.create_all()  # モデルに基づいてデータベーステーブルを作成
 
     from flask_app.app import bp

@@ -13,8 +13,8 @@
 
 ## 必要な環境
 
-- Python 3.7 以上
-- `uv` (パッケージ管理と仮想環境構築用)
+- Python 3.12
+- `uv` (パッケージ管理とPython仮想環境構築用)
 - Docker および Docker Compose
 
 ---
@@ -31,11 +31,6 @@
      ```command
      pip install uv
      ```
-   - 仮想環境を構築し、依存関係をインストールします。
-     ```command
-     uv init
-     uv install
-     ```
 
 3. **Docker で PostgreSQL を起動**:
 　　- docker-compose.yamlがあるディレクトリに移動してください。
@@ -49,17 +44,21 @@
 
 4. **アプリケーションを起動**:
    ```command
-   uv run python run.py
-   ```
-   
-5. **アプリケーションを起動**:
-   ```command
    uv run flask --app main run
    ```
+   
+5. ブラウザでアクセス: http://127.0.0.1:5000/ にアクセスする。
 
-6. ブラウザでアクセス: http://127.0.0.1:5000/ にアクセスしてください。
-
-
-
-
-あほあほあほあほ
+6. DBの内容を確認する場合
+   - Dockerディレクトリでコンテナへアクセス
+   ```command
+   docker exec -it postgres_container bash
+   ```
+   - postgresへアクセス
+   ```command
+   psql -U aho -d mymedia
+   ```
+   - テーブルの中身参照
+   ```command
+   SELECT * FROM "user";
+   ```
