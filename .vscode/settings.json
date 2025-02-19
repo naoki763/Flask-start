@@ -1,0 +1,10 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.ruffEnabled": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": true  // 保存時に Ruff の修正を適用
+    },
+    "[python]": {
+      "editor.defaultFormatter": "charliermarsh.ruff"
+    }
+  }

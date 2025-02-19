@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_app.models import User
-from flask_app import db
+# from flask_app import db
+from flask_app.factory import db
 
 bp = Blueprint('main', __name__)
 
